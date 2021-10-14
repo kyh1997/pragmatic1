@@ -2,19 +2,9 @@
 
 {% block content %}
 
-    <style>
-        .testing{
-            background-color: white;
-            height: 3rem;
-            width: 3rem;
-            margin: 1rem;
-        }
-
-    </style>
-
     <div style="border-radius: 1rem; margin: 2rem; text-align: center">
         <h1 style="font-family:'Festive', cursive;">
-            hello world list!
+            Hello World List!
 
         </h1>
 
@@ -28,11 +18,13 @@
             </div>
         </form>
 
-        {% if hello_wolrd_output %}
+        {% if hello_world_list%}
+            {% for hello_world in hello_world_list %}
 
-        <h1>
-            {{ hello_world_output.text }}
-        </h1>
-    {% endif %}
+        <h4>
+            {{ hello_world.text }}
+        </h4>
+            {% endfor %}
+        {% endif %}
     </div>
     {%  endblock %}
