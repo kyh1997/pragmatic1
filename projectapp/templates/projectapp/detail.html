@@ -18,8 +18,10 @@
         <div class="text-center mb-5">
             {% if user.is_authenticated  %}
                 {% if not subscription %}
-            <a href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}"
-                class=" btn btn-outline-warning rounded-pill px-4">
+            <a class="material-icons"
+              style="box-shadow: 0 0 4px; color:hotpink; border-radius: 10rem; padding: .4rem;"
+              href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}">
+               favorite
             좋아요
             </a>
             {% else %}
