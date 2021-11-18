@@ -19,13 +19,13 @@
             {% if user.is_authenticated  %}
                 {% if not subscription %}
             <a href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}"
-                class="btn btn-outline-warning rounded-pill px-4">
-                좋아요
+                class=" btn btn-outline-warning rounded-pill px-4">
+            좋아요
             </a>
             {% else %}
             <a href="{% url 'subscribeapp:subscribe' %}?project_pk={{ target_project.pk }}"
-                class="btn btn-dark rounded-pill px-4">
-                좋아요 취소
+                class="btn btn-outline-warning rounded-pill px-4">
+            좋아요 취소
             </a>
                 {% endif %}
             {% endif %}
